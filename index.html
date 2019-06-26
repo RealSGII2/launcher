@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    
+    <style>
+       .heade {
+      		padding: 70px;
+      		background-image: linear-gradient(to right, #f7866c , #f24018);
+      		width: 100%;
+      }
+
+      .topnav {
+        padding: 0.5em 0.5em;
+        overflow: hidden;
+        background-color: #23272A;
+        position: fixed;
+        width: 100%;
+      }
+
+      
+    	body {
+            background-color: #2C2F33;
+        }
+
+      	button:focus {
+      	      		outline: none;
+      	}
+      
+        .button-r {
+            font-size: 14px;
+            padding: 0.75em 1.5em;
+            margin: 3px;
+            border: 0;
+            outline: 0;
+            color: white;
+            background-color: #f46c4d;
+            text-transform: uppercase;
+      		border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+
+            overflow: hidden;
+            position: relative;
+      		transition: 0.3s;
+        }
+      
+      	.button-r:focus {
+              background-color: #f79883;
+      		  transition: 0.3s;
+          }
+      
+      	 .button-rt {
+            font-size: 14px;
+            padding: 0.75em 1.5em;
+            margin: 3px;
+            border: 0;
+            outline: 0;
+            color: white;
+            background-color: rgba(255, 255, 255, 0);
+            text-transform: uppercase;
+      		border: none;
+            border-radius: 5px;
+
+            overflow: hidden;
+            position: relative;
+      		transition: 0.3s;
+        }
+      
+      	.button-rt:focus {
+              background-color: rgba(255, 255, 255, 0.1);
+      		  transition: 0.3s;
+          }
+
+        .ripple {
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.7);
+            position: absolute;
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+        }
+
+        @keyframes ripple {
+            to {
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+			<input type="button" class="button-r" value="invite" onclick="window.location.href='/launcher/invite'" />
+            
+      		<input type="button" class="button-rt" value="vote" onclick="window.location.href='/launcher/upvote'" />
+      		
+     		<input type="button" class="button-rt" value="home" onclick="window.location.href='/launcher/'" />
+      
+      		<input type="button" class="button-rt" value="premium" onclick="window.location.href='/launcher/premium'" />
+      
+    </div>
+	
+    <div class='heade text-center text-light'>
+    	<p style='font-size:40'>
+          LAUNCHER
+      </p>
+      
+      <p style='font-size:25'>
+          Launcher your member count to space!
+      </p>
+      
+      <div class='container' style='padding:10px;'>
+      	<div class='text-center'>
+          <a href="https://discordbots.org/bot/581722486115270656">
+            <img src="https://discordbots.org/api/widget/status/581722486115270656.svg" alt="Launcher" />
+          </a>
+          
+          <a href="https://discordbots.org/bot/581722486115270656" >
+            <img src="https://discordbots.org/api/widget/servers/581722486115270656.svg" alt="Launcher" />
+          </a>
+          
+          <a href="https://discordbots.org/bot/581722486115270656" >
+            <img src="https://discordbots.org/api/widget/upvotes/581722486115270656.svg" alt="Launcher" />
+          </a>
+
+          <p></p>
+          
+         <a href="https://discordbots.org/bot/581722486115270656" >
+            <img src="https://discordbots.org/api/widget/lib/581722486115270656.svg" alt="Launcher" />
+          </a>
+          
+          <a href="https://discordbots.org/bot/581722486115270656" >
+            <img src="https://discordbots.org/api/widget/owner/581722486115270656.svg" alt="Launcher" />
+          </a>
+      </div>
+    </div>
+    </div>
+    
+    <p>
+      
+    </p>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script>
+    	var buttons = document.getElementsByTagName('button');
+
+        Array.prototype.forEach.call(buttons, function (b) {
+            b.addEventListener('click', createRipple);
+        });
+
+        function createRipple (e) {
+            var circle = document.createElement('div');
+            this.appendChild(circle);
+
+            var d = Math.max(this.clientWidth, this.clientHeight);
+
+            circle.style.width = circle.style.height = d + 'px';
+
+        var rect = this.getBoundingClientRect();
+        circle.style.left = e.clientX - rect.left -d/2 + 'px';
+        circle.style.top = e.clientY - rect.top - d/2 + 'px';
+
+            console.log(this);
+
+            circle.classList.add('ripple');
+        }
+    </script>
+  </body>
+</html>
