@@ -98,7 +98,7 @@
   </head>
   <body>
     <div class="topnav">
-			<input type="button" class="button-r" value="invite" onclick="window.location.href='/launcher/invite'" />
+			<input type="button" class="button-r" value="invite" onclick="red('/launcher/invite')" />
             
       		<input type="button" class="button-rt" value="vote" onclick="window.location.href='/launcher/upvote'" />
       		
@@ -175,6 +175,8 @@
 
             circle.classList.add('ripple');
         }
+      
+		function red(url) { setTimeout(function(){window.location.href=url}, 1000)}
     </script>
   </body>
 </html>
