@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Launcher</title>
     
     <style>
        .heade {
@@ -23,6 +23,7 @@
         background-color: #23272A;
         position: fixed;
         width: 100%;
+      	z-index: 52;
       }
 
       
@@ -33,6 +34,18 @@
       	button:focus {
       	      		outline: none;
       	}
+      
+		.box {
+      		border-style: solid;
+      		border-width: 1px;
+      		border-color: #1d2123;
+      		border-radius: 6px;
+      		background-color: #23272A;
+      		color: #fff;
+      		width: 90%;
+      		display: inline-block;
+      		padding: 10px;
+         }
       
         .button-r {
             font-size: 14px;
@@ -98,7 +111,7 @@
   </head>
   <body>
     <div class="topnav">
-			<input type="button" class="button-r" value="invite" onclick="window.location.href='/launcher/invite'" />
+			<input type="button" class="button-r" value="invite / help" onclick="window.location.href='/launcher/invite'" />
             
       		<input type="button" class="button-rt" value="vote" onclick="window.location.href='/launcher/upvote'" />
       		
@@ -114,7 +127,7 @@
       </p>
       
       <p style='font-size:25px'>
-          Launcher your member count to space!
+          Launch your member count to space!
       </p>
       
       <div class='container' style='padding:10px;'>
@@ -145,6 +158,43 @@
     <p>
       
     </p>
+    
+    <div style='text-align: center' class='text-light'>
+      	<div class='box'>
+          <input type="button" class="button-rt" value="commands" onclick="window.location.href='/launcher/extra/commands'" />
+          <input type="button" class="button-rt" value="shop" onclick="window.location.href='/launcher/extra/shop'" />
+          <input type="button" class="button-rt" value="docs" onclick="window.location.href='/launcher/extra/docs'" />
+          <input type="button" class="button-rt" value="support" onclick="window.location.href='/launcher/invite#support'" />
+      </div>
+      <p></p>
+      <h1 style='font-size:35px'> FEATURES </h1>
+      <h2 style='font-size:25px'> Easy Setup </h2>
+      <p style='font-size:18px'>
+          Set up your server easily with the <kbd>r!set</kbd> command. <br><br><br>
+      </p>
+      
+      <h2 style='font-size:25px'> Fully Customisable Ad </h2>
+      <p style='font-size:18px'>
+          You can have your own <kbd>description</kbd>, <kbd>banner</kbd>, <kbd>invite</kbd>, and set your own <kbd>color</kbd>. <br><br><br>
+      </p>
+      
+      <h2 style='font-size:25px'> Premium Perks </h2>
+      <p style='font-size:18px'>
+          Reduced cooldowns (45m; 30m) are available for coins! You may also get Automation to bump your server automatically.
+      </p>
+      
+      <div class='box'>
+        <h1 style='font-size:35px'> What are you waiting for? </h1>
+        <p style='font-size:18px'>
+          Add Launcher to your server now!
+      </p>
+        <input type="button" class="button-r" value="invite" onclick="window.location.href='/launcher/invite'" />
+        <input type="button" class="button-r" value="support" onclick="window.location.href='/launcher/invite'" />
+      </div>
+    </div>
+    <p></p>
+    
+    
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
